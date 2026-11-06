@@ -170,11 +170,12 @@
 
 /* School and department links hover effect */
 .school-link :hover{
+    color: yellow;
     text-decoration: underline;
-    color: yellow;
 }
-.department-link:hover{
+.department-link :hover{
     color: yellow;
+    text-decoration: underline;
 }
 
 /* Education title */
