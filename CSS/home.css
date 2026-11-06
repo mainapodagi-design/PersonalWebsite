@@ -1,0 +1,457 @@
+
+/* ==========================================
+   MY PERSONAL WEBSITE - MAIN CSS
+   ========================================== */
+
+/* Remove default spacing from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main website styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #071426;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Remove default link decoration */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ==========================================
+   NAVIGATION BAR
+   ========================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 85px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 16, 32, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: relative;
+    z-index: 100;
+}
+
+/* Website logo */
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #168cff;
+}
+
+/* Navigation links container */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Individual navigation links */
+.nav-links a {
+    color: #c7d2e0;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Navigation hover effect */
+.nav-links a:hover,
+.nav-links a.active {
+    color: #168cff;
+}
+
+/* Mobile navigation controls */
+#menu-toggle,
+.menu-icon {
+    display: none;
+}
+
+/* ==========================================
+   HOME HERO SECTION
+   ========================================== */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+
+    /* Add your own background image here */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 13, 29, 0.96),
+            rgba(3, 13, 29, 0.78)
+        ),
+        url("images/background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero text container */
+.hero-content {
+    max-width: 650px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Welcome text */
+.welcome {
+    color: #168cff;
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Main heading */
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+/* Highlighted name */
+.hero-content h1 span {
+    color: #168cff;
+}
+
+/* Secondary heading */
+.hero-content h2 {
+    font-size: clamp(19px, 2.5vw, 28px);
+    color: #c3d1e1;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+/* Highlighted profession */
+.hero-content h2 span {
+    color: #168cff;
+}
+
+/* Description */
+.description {
+    color: #aebed0;
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+/* General button styling */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* Primary button */
+.primary-btn {
+    background: #168cff;
+    color: white;
+    border: 2px solid #168cff;
+}
+
+/* Primary button hover */
+.primary-btn:hover {
+    background: transparent;
+    transform: translateY(-4px);
+}
+
+/* Secondary button */
+.secondary-btn {
+    border: 2px solid #168cff;
+    color: #ffffff;
+}
+
+/* Secondary button hover */
+.secondary-btn:hover {
+    background: #168cff;
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   SOCIAL MEDIA ICONS
+   ========================================== */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+/* Social icon circles */
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #168cff;
+    border-radius: 50%;
+    color: #168cff;
+    transition: 0.3s;
+}
+
+/* Social icon hover */
+.social-links a:hover {
+    background: #168cff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   PROFILE IMAGE
+   ========================================== */
+
+.hero-image {
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Image border */
+.image-border {
+    width: 320px;
+    height: 380px;
+    border: 4px solid #168cff;
+    border-radius: 160px 160px 25px 25px;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(22,140,255,0.2);
+}
+
+/* Profile photograph */
+.image-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* Floating badge */
+.floating-badge {
+    position: absolute;
+    bottom: 30px;
+    left: -45px;
+    background: #102a48;
+    padding: 14px 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #168cff;
+    font-size: 13px;
+}
+
+.floating-badge i {
+    color: #168cff;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.footer {
+    background: #030c18;
+    padding: 25px 10%;
+    text-align: center;
+    color: #91a1b5;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.footer i {
+    color: #168cff;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+/* Tablets and smaller laptops */
+@media (max-width: 950px) {
+
+    .hero {
+        padding: 70px 6%;
+        gap: 35px;
+    }
+
+    .image-border {
+        width: 260px;
+        height: 320px;
+    }
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 700px) {
+
+    /* Show mobile menu icon */
+    .menu-icon {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        color: #168cff;
+    }
+
+    /* Hide normal navigation initially */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: #071426;
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+        border-top: 1px solid #168cff;
+    }
+
+    /* Show navigation when menu is clicked */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Stack hero content vertically */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+        gap: 50px;
+    }
+
+    /* Center the description */
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Center buttons */
+    .hero-buttons,
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Resize profile image */
+    .image-border {
+        width: 230px;
+        height: 270px;
+    }
+
+    /* Adjust floating badge */
+    .floating-badge {
+        left: -20px;
+        bottom: 15px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .image-border {
+        width: 200px;
+        height: 240px;
+    }
+}
+
+/* ==========================================
+   ADDITIONAL HOME PAGE IMPROVEMENTS
+   ========================================== */
+
+/* Improve readability of the hero introduction */
+.description {
+    max-width: 620px;
+    text-align: justify;
+}
+
+/* Ensure profile image displays correctly */
+.image-border img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Make footer styling consistent */
+.footer {
+    background: #030c18;
+    padding: 25px 10%;
+    text-align: center;
+    color: #91a1b5;
+    font-size: 12px;
+    line-height: 2;
+}
+
+/* Footer heart icon */
+.footer i {
+    color: #168cff;
+}
+
+/* Improve mobile text readability */
+@media (max-width: 700px) {
+
+    .description {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+}

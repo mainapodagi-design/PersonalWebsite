@@ -1,27 +1,246 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background - My Personal Website</title>
+
+    <!-- Page title -->
+    <title>My Personal Website | Background</title>
+
+    <!-- Link background CSS -->
+    <link rel="stylesheet" href="../CSS/background.css">
+
+    <!-- Online Font Awesome icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="background.html">Background</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+    <header class="navbar">
+
+        <!-- Website logo -->
+        <a href="home.html" class="logo">
+            <span>MY</span> WEBSITE.
+        </a>
+
+        <!-- Mobile menu -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Navigation links -->
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="background.html" class="active">Background</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
         </nav>
-        <h1>My Background</h1>
+
     </header>
-    <main>
-        <section>
-            <h2>Background</h2>
-            <p>This is the background section of my personal website.</p>
+
+    <!-- ================= BACKGROUND PAGE ================= -->
+    <main class="background-page">
+
+        <!-- Page introduction -->
+        <section class="page-heading">
+
+            <p class="section-label">GET TO KNOW ME</p>
+
+            <h1>My <span>Background</span></h1>
+
+            <p>
+                Every individual has a story.
+                Here is a little about mine.
+            </p>
+
         </section>
+
+        <!-- About me section -->
+        <section class="about-section">
+
+            <!-- Personal photograph -->
+            <div class="about-image">
+
+                <img src="../IMAGES/Malah.jpg"
+                     alt="My personal photograph">
+
+            </div>
+
+            <!-- Biography -->
+            <div class="about-text">
+
+                <p class="section-label">WHO I AM</p>
+
+                <h2>A Little About <span>Myself</span></h2>
+
+                <p>
+                    My name is <strong>MALACHAI MAINAPO</strong>.
+                    I am an ambitious, determined and creative individual
+                    who believes that personal growth comes through
+                    discipline, consistency and continuous learning.
+                </p>
+
+                <p>
+                    I enjoy exploring technology, learning new skills,
+                    solving problems and challenging myself to become
+                    a better version of who I was yesterday.
+                </p>
+
+                <p>
+                    I believe that knowledge becomes more powerful
+                    when it is shared. My goal is to use my abilities
+                    and experiences to make a positive contribution
+                    to my community and the world.
+                </p>
+
+                <!-- Personal information -->
+                <div class="personal-details">
+
+                    <div>
+                        <strong>Name:</strong>
+                        <span>Malachai Mainapo</span>
+                    </div>
+
+                    <div>
+                        <strong>Country:</strong>
+                        <span>Papua New Guinea</span>
+                    </div>
+
+                    <div>
+                        <strong>Profession:</strong>
+                        <span>Student / Aspiring Developer</span>
+                    </div>
+
+                    <div>
+                        <strong>Interests:</strong>
+                        <span>Technology, Coding, Sports</span>
+                    </div>
+
+                </div>
+
+                <!-- Contact button -->
+                <a href="contact.html" class="btn primary-btn">
+                    Get In Touch
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- Education section -->
+        <section class="education-section">
+
+            <h2>My <span>Education</span></h2>
+
+            <div class="education-card">
+
+                <!-- Education icon -->
+                <div class="education-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+
+                <!-- Education details -->
+                <div>
+                    <span class="education-date">CURRENT STUDIES</span>
+
+                    <h3>University Education</h3>
+
+                    <p class="school-link">
+                        Institution: <a href="https://dwu.ac.pg/">Divine Word University </a>
+                    </p>
+
+                    <p class="department-link">
+                        Programme: <a href="https://dwu.ac.pg/programs/4/">Bachelor of Mathematics and Computing Science</a>
+                    </p>
+
+                    <p>
+                        Learning, developing technical skills and
+                        preparing for future professional opportunities.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Interests section -->
+        <section class="interests-section">
+
+            <h2>My <span>Interests</span></h2>
+
+            <div class="interests-grid">
+
+                <!-- Interest 1 -->
+                <div class="interest-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Technology</h3>
+                    <p>Exploring technology and innovation.</p>
+                </div>
+
+                <!-- Interest 2 -->
+                <div class="interest-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Learning</h3>
+                    <p>Developing knowledge and new abilities.</p>
+                </div>
+
+                <!-- Interest 3 -->
+                <div class="interest-card">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Sports</h3>
+                    <p>Enjoying physical activities and teamwork.</p>
+                </div>
+
+                <!-- Interest 4 -->
+                <div class="interest-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Innovation</h3>
+                    <p>Creating ideas and solving problems.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Personal philosophy -->
+        <section class="philosophy-section">
+
+            <i class="fas fa-quote-left"></i>
+
+            <h2>My Philosophy</h2>
+
+            <p>
+                "Success is not simply about where you start,
+                but about the discipline, determination and
+                consistency you demonstrate along the journey."
+            </p>
+
+            <span>MY PERSONAL MOTTO</span>
+
+        </section>
+
     </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
+
+        <p>Designed with <i class="fas fa-heart"></i> and creativity.</p>
+
+    </footer>
+
 </body>
 </html>

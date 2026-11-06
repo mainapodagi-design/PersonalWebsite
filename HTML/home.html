@@ -1,35 +1,235 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- Defines character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="..CSS/home.css">
+
+    <!-- Website title -->
+    <title>My Personal Website | Home</title>
+
+    <!-- Online Font Awesome icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Online Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+    <!-- Link to external Home CSS file -->
+    <link rel="stylesheet" href="../CSS/home.css">
+
 </head>
+
 <body>
-    <header>
-        <h2>My Portfolio</h2>
-        <nav>
-            <!--Navigation Bar-->
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="background.html">Background</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+
+    <!-- ================= NAVIGATION BAR ================= -->
+
+    <header class="navbar">
+
+        <!-- Website Logo -->
+        <a href="home.html" class="logo">
+            <span>MY</span> WEBSITE.
+        </a>
+
+        <!-- Mobile Menu Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Mobile Menu Icon -->
+        <label for="menu-toggle" class="menu-icon"
+        aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+
+            <a href="home.html" class="active">Home</a>
+
+            <a href="background.html">Background</a>
+
+            <a href="portfolio.html">Portfolio</a>
+
+            <a href="contact.html">Contact</a>
+
         </nav>
+
     </header>
-    <main>
-        <h1>Welcome to My Personal Website</h1>
-        <p>This is a simple personal website created with HTML and CSS.</p>
-        <secton>
-            <h2>About Me</h2>
-            <p>Hello. I'm Malachai Mainapo a junior developer and this here is my personal website.</p>
-        </secton>
-        <h2>My Projects</h2>
+
+
+    <!-- ================= HOME AND HERO SECTION ================= -->
+
+    <main class="hero">
+
+        <!-- Background Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Main Introduction -->
+        <div class="hero-content">
+
+            <!-- Welcome Message -->
+            <p class="welcome">
+                WELCOME TO MY PERSONAL WEBSITE
+            </p>
+
+            <!-- Main Heading -->
+            <h1>
+                Hello, I'm <span>Malachai Mainapo</span>
+            </h1>
+
+            <!-- Professional Introduction -->
+            <h2>
+                An Aspiring <span>Software Developer</span>
+            </h2>
+
+            <!-- Personal Introduction -->
+            <p class="description">
+
+                This is a personal project that I created to showcase
+                my skills and passion for web development.
+
+                This website is built using HTML and CSS, serving as
+                a platform to share information about myself, my
+                educational background, interests and portfolio
+                of projects.
+
+                Feel free to explore the different sections of my
+                website to learn more about me and my work.
+
+                I am a passionate and ambitious individual who
+                believes in creativity, continuous learning and
+                personal growth. I enjoy technology, problem-solving
+                and developing innovative ideas that can make
+                a difference.
+
+            </p>
+
+
+            <!-- ================= ACTION BUTTONS ================= -->
+
+            <div class="hero-buttons">
+
+                <!-- Portfolio Button -->
+                <a href="portfolio.html" class="btn primary-btn">
+
+                    Explore My Work
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+                <!-- Contact Button -->
+                <a href="contact.html" class="btn secondary-btn">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+
+            <!-- ================= SOCIAL MEDIA LINKS ================= -->
+
+            <div class="social-links">
+
+                <!-- Facebook Link -->
+                <a href="https://www.facebook.com/malachai.mainapo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook">
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+                <!-- Instagram Link -->
+                <a href="https://www.instagram.com/malachai.mainapo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+                <!-- LinkedIn Link -->
+                <!-- Replace with your actual LinkedIn profile URL -->
+                <a href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <!-- GitHub Link -->
+                <a href="https://github.com/malachaimainapo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ================= END OF HERO CONTENT ================= -->
+
+
+        <!-- ================= PROFILE IMAGE SECTION ================= -->
+
+        <div class="hero-image">
+
+            <!-- Profile Image Container -->
+            <div class="image-border">
+
+                <!-- Your Personal Photograph -->
+                <img src="../Images/Malah.jpg"
+                alt="Portrait of Malachai Mainapo">
+
+            </div>
+
+            <!-- Decorative Floating Badge -->
+            <div class="floating-badge">
+
+                <i class="fas fa-star"></i>
+
+                <span>Creative Mind</span>
+
+            </div>
+
+        </div>
+
     </main>
-    <footer>
-        <p>© 2026 Malachai Mainapo. All Rights Reserved</p>
+
+
+    <!-- ================= FOOTER SECTION ================= -->
+
+    <footer class="footer">
+
+        <!-- Copyright Information -->
+        <p>
+            &copy; 2026 Malachai Mainapo. All Rights Reserved.
+        </p>
+
+        <!-- Website Design Credit -->
+        <p>
+            Designed with <i class="fas fa-heart"></i> and creativity.
+        </p>
+
     </footer>
+
 </body>
+
 </html>

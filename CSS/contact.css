@@ -1,0 +1,273 @@
+
+/* Import shared website styles */
+@import url("home.css");
+
+/* ==========================================
+   CONTACT PAGE
+   ========================================== */
+
+/* Main contact page */
+.contact-page {
+    min-height: 85vh;
+    padding: 65px 9%;
+    background: #071426;
+}
+
+/* Page heading */
+.page-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+/* Section label */
+.section-label {
+    color: #168cff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+/* Main heading */
+.page-heading h1 {
+    font-size: clamp(35px, 5vw, 50px);
+    margin-bottom: 15px;
+}
+
+/* Highlight */
+.page-heading h1 span {
+    color: #168cff;
+}
+
+/* Heading paragraph */
+.page-heading p:last-child {
+    color: #aebed0;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   CONTACT LAYOUT
+   ========================================== */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    align-items: start;
+}
+
+/* Contact information panel */
+.contact-info {
+    background: linear-gradient(145deg, #102b49, #0b1c31);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(22,140,255,0.2);
+}
+
+/* Contact heading */
+.contact-info h2 {
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+/* Contact introduction */
+.contact-info > p {
+    color: #aebed0;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* Contact item layout */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+/* Contact icon box */
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background: rgba(22,140,255,0.13);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #168cff;
+    font-size: 19px;
+}
+
+/* Contact item heading */
+.contact-item h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Contact item text */
+.contact-item p {
+    font-size: 12px;
+    color: #aebed0;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   SOCIAL MEDIA
+   ========================================== */
+
+.contact-socials {
+    display: flex;
+    gap: 13px;
+    margin-top: 35px;
+}
+
+/* Social icons */
+.contact-socials a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #168cff;
+    color: #168cff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Social hover */
+.contact-socials a:hover {
+    background: #168cff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ==========================================
+   CONTACT FORM
+   ========================================== */
+
+.contact-form-container {
+    background: #10243d;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Form heading */
+.contact-form-container h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Form labels */
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #d5e2f0;
+}
+
+/* Input and textarea */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #071426;
+    color: white;
+    border: 1px solid #29435f;
+    outline: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* Input focus effect */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #168cff;
+    box-shadow: 0 0 10px rgba(22,140,255,0.12);
+}
+
+/* Placeholder colour */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #75879d;
+}
+
+/* Textarea settings */
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+   ========================================== */
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #168cff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.submit-btn:hover {
+    background: #0872d5;
+    transform: translateY(-3px);
+}
+
+/* Button icon spacing */
+.submit-btn i {
+    margin-left: 8px;
+}
+
+/* Form response */
+#form-response {
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 850px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding: 50px 6%;
+    }
+
+    .contact-info,
+    .contact-form-container {
+        padding: 25px 20px;
+    }
+
+    .contact-form-container h2 {
+        font-size: 21px;
+    }
+}

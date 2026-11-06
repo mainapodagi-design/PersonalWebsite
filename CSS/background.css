@@ -1,0 +1,370 @@
+
+/* Import the shared website styling */
+@import url("home.css");
+
+/* ==========================================
+   BACKGROUND PAGE
+   ========================================== */
+
+/* Main page */
+.background-page {
+    padding: 65px 9%;
+    background: #071426;
+}
+
+/* Page heading */
+.page-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 65px;
+}
+
+/* Small section heading */
+.section-label {
+    color: #168cff;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Main heading */
+.page-heading h1 {
+    font-size: clamp(35px, 5vw, 50px);
+    margin-bottom: 15px;
+}
+
+/* Blue highlighted text */
+.page-heading h1 span,
+.about-text h2 span,
+.education-section h2 span,
+.interests-section h2 span {
+    color: #168cff;
+}
+
+/* Introduction paragraph */
+.page-heading p:last-child {
+    color: #aebed0;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   ABOUT ME SECTION
+   ========================================== */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+/* About image container */
+.about-image {
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #168cff;
+    box-shadow: 0 0 35px rgba(22,140,255,0.15);
+}
+
+/* Personal photograph */
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About heading */
+.about-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* About paragraphs */
+.about-text > p:not(.section-label) {
+    color: #aebed0;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* Personal details container */
+.personal-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin: 30px 0;
+}
+
+/* Individual personal detail */
+.personal-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Personal detail title */
+.personal-details strong {
+    font-size: 12px;
+    color: #168cff;
+}
+
+/* Personal detail value */
+.personal-details span {
+    font-size: 12px;
+    color: #d0dbea;
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   EDUCATION SECTION
+   ========================================== */
+
+.education-section {
+    margin-bottom: 85px;
+}
+
+/* Education heading */
+.education-section h2,
+.interests-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* Education card */
+.education-card {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: auto;
+    padding: 35px;
+    background: #10243d;
+    border-left: 4px solid #168cff;
+    border-radius: 8px;
+}
+
+/* Education icon container */
+.education-icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    background: rgba(22,140,255,0.15);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #168cff;
+    font-size: 25px;
+}
+
+/* Education date */
+.education-date {
+    color: #168cff;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* School and department links hover effect */
+.school-link :hover{
+    text-decoration: underline;
+    color: yellow;
+}
+.department-link:hover{
+    color: yellow;
+}
+
+/* Education title */
+.education-card h3 {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+/* Education description */
+.education-card p {
+    color: #aebed0;
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+/* ==========================================
+   INTERESTS SECTION
+   ========================================== */
+
+.interests-section {
+    margin-bottom: 85px;
+}
+
+/* Interests grid */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual interest card */
+.interest-card {
+    text-align: center;
+    padding: 30px 15px;
+    background: #10243d;
+    border: 1px solid rgba(22,140,255,0.12);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Interest icon */
+.interest-card i {
+    font-size: 35px;
+    color: #168cff;
+    margin-bottom: 18px;
+}
+
+/* Interest title */
+.interest-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Interest description */
+.interest-card p {
+    font-size: 12px;
+    color: #aebed0;
+    line-height: 1.7;
+}
+
+/* Interest hover */
+.interest-card:hover {
+    transform: translateY(-8px);
+    border-color: #168cff;
+    background: #132e4c;
+}
+
+/* ==========================================
+   PERSONAL PHILOSOPHY
+   ========================================== */
+
+.philosophy-section {
+    text-align: center;
+    padding: 60px 30px;
+    background:
+        linear-gradient(
+            rgba(5, 18, 36, 0.92),
+            rgba(5, 18, 36, 0.92)
+        ),
+        url("images/background.jpg");
+
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    border: 1px solid rgba(22,140,255,0.3);
+}
+
+/* Quote icon */
+.philosophy-section > i {
+    color: #168cff;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+/* Philosophy heading */
+.philosophy-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Philosophy quote */
+.philosophy-section p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 2;
+    color: #c6d4e3;
+    font-style: italic;
+}
+
+/* Motto text */
+.philosophy-section span {
+    display: block;
+    margin-top: 25px;
+    color: #168cff;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .about-section {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .about-image {
+        height: 350px;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .background-page {
+        padding: 50px 6%;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 350px;
+        max-width: 350px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+    .education-card {
+        padding: 25px 18px;
+        gap: 15px;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .philosophy-section {
+        padding: 45px 20px;
+    }
+
+    .philosophy-section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .personal-details {
+        grid-template-columns: 1fr;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        flex-direction: column;
+    }
+}
