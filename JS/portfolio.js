@@ -1,4 +1,3 @@
-
 // ==========================================
 // FIREBASE PORTFOLIO CONNECTION
 // ==========================================
@@ -21,12 +20,50 @@ const projectContainer = document.getElementById("dynamicProjects");
 
 
 // ==========================================
+// IMAGE PATH HANDLER
+// ==========================================
+
+function getProjectImagePath(imagePath) {
+
+    if (typeof imagePath !== "string" || !imagePath.trim()) {
+        return null;
+    }
+
+    const cleanPath = imagePath.trim();
+
+    // Allow full HTTP and HTTPS image URLs
+    if (/^https?:\/\//i.test(cleanPath)) {
+        return cleanPath;
+    }
+
+    // Allow GitHub project image paths
+    // Example: ../IMAGES/PROJECTS/football-app.jpg
+
+    if (
+        cleanPath.startsWith("../IMAGES/") ||
+        cleanPath.startsWith("./IMAGES/") ||
+        cleanPath.startsWith("IMAGES/")
+    ) {
+        return new URL(cleanPath, document.baseURI).href;
+    }
+
+    // Reject unsupported paths
+    return null;
+}
+
+
+// ==========================================
 // LOAD PROJECTS FROM FIRESTORE
 // ==========================================
 
 async function loadPortfolioProjects() {
 
     try {
+
+        if (!projectContainer) {
+            console.error("Project container not found.");
+            return;
+        }
 
         projectContainer.textContent = "Loading my projects...";
 
@@ -62,20 +99,35 @@ async function loadPortfolioProjects() {
             card.className = "project-card";
 
 
-            // Project image container
+            // ==================================
+            // PROJECT IMAGE
+            // ==================================
+
             const imageContainer = document.createElement("div");
             imageContainer.className = "project-image";
 
-            // Optional project image
-            if (
-                typeof project.image === "string" &&
-                /^https:\/\//i.test(project.image)
-            ) {
+            // Get image path
+            const imagePath = getProjectImagePath(project.image);
+
+            if (imagePath) {
 
                 const image = document.createElement("img");
 
-                image.src = project.image;
+                image.src = imagePath;
                 image.alt = project.name || "Portfolio project";
+                image.loading = "lazy";
+
+                // Show placeholder if image cannot load
+                image.onerror = function () {
+
+                    const placeholder = document.createElement("div");
+
+                    placeholder.className = "project-image-placeholder";
+                    placeholder.textContent = "PROJECT";
+
+                    imageContainer.replaceChildren(placeholder);
+
+                };
 
                 imageContainer.appendChild(image);
 
@@ -91,7 +143,10 @@ async function loadPortfolioProjects() {
             }
 
 
-            // Project information container
+            // ==================================
+            // PROJECT INFORMATION
+            // ==================================
+
             const information = document.createElement("div");
             information.className = "project-info";
 
@@ -140,11 +195,14 @@ async function loadPortfolioProjects() {
             });
 
 
-            // Project link
+            // Add project information
             information.append(category, title, description, tags);
 
 
-            // Only create a link when it is a valid HTTP(S) URL
+            // ==================================
+            // PROJECT LINK
+            // ==================================
+
             if (project.link) {
 
                 try {
@@ -185,7 +243,10 @@ async function loadPortfolioProjects() {
             }
 
 
-            // Assemble complete project card
+            // ==================================
+            // ASSEMBLE PROJECT CARD
+            // ==================================
+
             card.append(imageContainer, information);
 
             projectContainer.appendChild(card);
