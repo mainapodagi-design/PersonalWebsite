@@ -1,0 +1,126 @@
+
+/* General page styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #050b18, #102b50, #06101f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Login container */
+.login-container {
+    width: 100%;
+    max-width: 430px;
+}
+
+/* Login box */
+.login-box {
+    background: #111d30;
+    padding: 40px 35px;
+    border-radius: 18px;
+    border: 1px solid #243b5a;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+}
+
+.login-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.login-box h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #aab8ca;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+/* Form fields */
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    color: #d5dfed;
+}
+
+form input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #334b6b;
+    background: #091426;
+    color: white;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #168cff;
+}
+
+/* Login button */
+form button {
+    width: 100%;
+    padding: 13px;
+    background: #168cff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #0872d5;
+}
+
+/* Login message */
+#message {
+    margin-top: 15px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #168cff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .login-box h1 {
+        font-size: 21px;
+    }
+}

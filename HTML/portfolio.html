@@ -1,243 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Character encoding -->
     <meta charset="UTF-8">
-
-    <!-- Responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
 
-    <!-- Page title -->
-    <title>My Personal Website | Portfolio</title>
-
-    <!-- Link portfolio CSS -->
+    <!-- Portfolio CSS -->
     <link rel="stylesheet" href="../CSS/portfolio.css">
 
-    <!-- Online icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Google font -->
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+          rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Navigation bar -->
-    <header class="navbar">
+    <!-- ================= NAVIGATION BAR ================= -->
+    <header>
+        <nav class="navbar">
 
-        <!-- Website logo -->
-        <a href="home.html" class="logo">
-            <span>MY</span> WEBSITE.
-        </a>
+            <div class="logo">
+                My Portfolio
+            </div>
 
-        <!-- Mobile menu -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </label>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="background.html">Background</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-        <!-- Page navigation -->
-        <nav class="nav-links">
-            <a href="home.html">Home</a>
-            <a href="background.html">Background</a>
-            <a href="portfolio.html" class="active">Portfolio</a>
-            <a href="contact.html">Contact</a>
         </nav>
-
     </header>
 
-    <!-- Main portfolio content -->
-    <main class="portfolio-page">
 
-        <!-- Page heading -->
-        <section class="page-heading">
+    <!-- ================= PORTFOLIO INTRODUCTION ================= -->
+    <section class="portfolio-section">
 
-            <p class="section-label">MY WORK AND EXPERIENCE</p>
+        <div class="portfolio-content">
 
-            <h1>My <span>Portfolio</span></h1>
+            <h1>My Portfolio</h1>
 
             <p>
-                A collection of my projects, technical skills,
-                creativity and personal achievements.
+                Welcome to my portfolio. Here you can explore some of my
+                projects, technical skills, and development work.
+                Each project represents an opportunity to learn,
+                solve problems, and develop practical solutions.
             </p>
 
-        </section>
+        </div>
 
-        <!-- Skills section -->
-        <section class="skills-section">
+    </section>
 
-            <h2>My Technical Skills</h2>
 
-            <div class="skills-grid">
+    <!-- ================= MY SKILLS ================= -->
+    <section class="skills-section">
 
-                <!-- Skill 1 -->
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML</h3>
-                    <p>Web page structure</p>
-                </div>
+        <h2>My Technical Skills</h2>
 
-                <!-- Skill 2 -->
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS</h3>
-                    <p>Web design and styling</p>
-                </div>
+        <div class="skills-grid">
 
-                <!-- Skill 3 -->
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <h3>Python</h3>
-                    <p>Programming and problem-solving</p>
-                </div>
-
-                <!-- Skill 4 -->
-                <div class="skill-card">
-                    <i class="fas fa-database"></i>
-                    <h3>Database</h3>
-                    <p>Data management</p>
-                </div>
-
+            <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>Building structured and meaningful web pages.</p>
             </div>
 
-        </section>
-
-        <!-- Projects section -->
-        <section class="projects-section">
-
-            <h2>Featured Projects</h2>
-
-            <div class="projects-grid">
-
-                <!-- Project 1 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="images/project1.jpg"
-                             alt="Personal website project">
-                    </div>
-
-                    <div class="project-info">
-
-                        <span class="project-category">WEB DEVELOPMENT</span>
-
-                        <h3>Personal Website</h3>
-
-                        <p>
-                            A responsive personal website developed
-                            using HTML and CSS to showcase my
-                            background and professional profile.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>HTML</span>
-                            <span>CSS</span>
-                        </div>
-
-                        <a href="home.html" class="project-link">
-                            View Project <i class="fas fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="images/project2.jpg"
-                             alt="Software development project">
-                    </div>
-
-                    <div class="project-info">
-
-                        <span class="project-category">PROGRAMMING</span>
-
-                        <h3>Software Development</h3>
-
-                        <p>
-                            An example of my programming experience,
-                            logical thinking and software development
-                            abilities.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>Python</span>
-                            <span>Programming</span>
-                        </div>
-
-                        <a href="contact.html" class="project-link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-card">
-
-                    <div class="project-image">
-                        <img src="images/project3.jpg"
-                             alt="Database project">
-                    </div>
-
-                    <div class="project-info">
-
-                        <span class="project-category">DATABASE</span>
-
-                        <h3>Database Management</h3>
-
-                        <p>
-                            A practical project demonstrating
-                            database design, organisation and
-                            data management concepts.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>SQL</span>
-                            <span>Database</span>
-                        </div>
-
-                        <a href="contact.html" class="project-link">
-                            Learn More <i class="fas fa-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </article>
-
+            <div class="skill-card">
+                <i class="fa-brands fa-css3-alt"></i>
+                <h3>CSS</h3>
+                <p>Designing responsive and attractive interfaces.</p>
             </div>
 
-        </section>
+            <div class="skill-card">
+                <i class="fa-brands fa-python"></i>
+                <h3>Python</h3>
+                <p>Developing programs and solving computational problems.</p>
+            </div>
 
-        <!-- Call to action -->
-        <section class="portfolio-cta">
+            <div class="skill-card">
+                <i class="fa-solid fa-database"></i>
+                <h3>Database</h3>
+                <p>Working with databases and managing application data.</p>
+            </div>
 
-            <h2>Have a Project in Mind?</h2>
+        </div>
 
-            <p>
-                Let's connect and explore opportunities to
-                create something meaningful.
+    </section>
+
+
+    <!-- ================= DYNAMIC PROJECTS ================= -->
+    <section class="projects-section">
+
+        <h2>Featured Projects</h2>
+
+        <p class="projects-description">
+            Explore some of the projects I have worked on.
+        </p>
+
+        <!-- Firebase projects will appear inside this container -->
+        <div class="projects-grid" id="dynamicProjects">
+
+            <p class="loading-message">
+                Loading my projects...
             </p>
 
-            <a href="contact.html" class="btn primary-btn">
-                Let's Talk <i class="fas fa-paper-plane"></i>
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+    <section class="portfolio-cta">
+
+        <h2>Have a Project in Mind?</h2>
+
+        <p>
+            I am always interested in learning, collaborating,
+            and working on meaningful technology projects.
+        </p>
+
+        <a href="contact.html" class="cta-button">
+            Contact Me
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 My Portfolio. All Rights Reserved.
+        </p>
+
+        <div class="social-links">
+
+            <a href="#" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
             </a>
 
-        </section>
+            <a href="#" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
 
-    </main>
+            <a href="#" aria-label="GitHub">
+                <i class="fa-brands fa-github"></i>
+            </a>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
-        <p>Designed with <i class="fas fa-heart"></i> and creativity.</p>
+        </div>
+
     </footer>
+
+
+    <!-- Firebase portfolio integration -->
+    <script type="module" src="../JS/portfolio.js"></script>
 
 </body>
 </html>

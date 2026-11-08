@@ -40,11 +40,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(5, 16, 32, 0.96);
+    background: #071426;
     border-bottom: 1px solid rgba(255,255,255,0.08);
     position: relative;
     z-index: 100;
 }
+/* Navigation Bar Background Image */
+
 
 /* Website logo */
 .logo {

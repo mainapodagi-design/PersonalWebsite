@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website | Admin Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Dashboard stylesheet -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            MY WEBSITE
+        </div>
+
+        <h3>MAIN MENU</h3>
+
+        <nav>
+
+            <button class="nav-link active" data-section="overview">
+                ◈ Overview
+            </button>
+
+            <button class="nav-link" data-section="projects">
+                ▣ Projects
+            </button>
+
+            <button class="nav-link" data-section="profile">
+                ◉ My Profile
+            </button>
+
+            <button class="nav-link" data-section="messages">
+                ✉ Messages
+            </button>
+
+        </nav>
+
+        <!-- Logout -->
+        <div class="sidebar-bottom">
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <h1 id="pageTitle">Dashboard Overview</h1>
+
+            <span class="admin-label">
+                Administrator
+            </span>
+
+        </header>
+
+
+        <!-- OVERVIEW SECTION -->
+        <section id="overview" class="section active">
+
+            <p class="welcome-text">
+                Welcome to your personal website administration panel.
+                Manage your content from one place.
+            </p>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+                    <p>Total Projects</p>
+                    <h2 id="projectCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Messages</p>
+                    <h2 id="messageCount">0</h2>
+                </div>
+
+                <div class="stat-card">
+                    <p>Account Status</p>
+                    <h2 style="font-size: 20px;">Active</h2>
+                </div>
+
+            </div>
+
+            <div class="panel">
+
+                <h2>Quick Information</h2>
+
+                <p class="welcome-text">
+                    Use the sidebar to manage your portfolio projects,
+                    personal information and visitor messages.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section">
+
+            <div class="panel">
+
+                <h2 id="projectFormTitle">Add New Project</h2>
+
+                <form id="projectForm">
+
+                    <input type="hidden" id="projectId">
+
+                    <div class="form-group">
+                        <label for="projectName">Project Name</label>
+                        <input type="text" id="projectName"
+                               placeholder="Enter project name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDescription">Description</label>
+                        <textarea id="projectDescription"
+                                  placeholder="Describe your project"
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectTechnologies">Technologies Used</label>
+                        <input type="text" id="projectTechnologies"
+                               placeholder="HTML, CSS, JavaScript">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectLink">Project Link (optional)</label>
+                        <input type="url" id="projectLink"
+                               placeholder="https://example.com">
+                    </div>
+
+                    <button type="submit" class="primary-button" id="saveProjectButton">
+                        Save Project
+                    </button>
+
+                    <button type="button" class="secondary-button"
+                            id="cancelEditButton" hidden>
+                        Cancel Edit
+                    </button>
+
+                    <p id="statusMessage" role="status" aria-live="polite"></p>
+
+                </form>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>Your Portfolio Projects</h2>
+
+                <div id="projectList" class="project-list">
+                    Loading projects...
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFILE SECTION -->
+        <section id="profile" class="section">
+
+            <div class="panel">
+
+                <h2>Personal Profile</h2>
+
+                <p class="welcome-text">
+                    We'll connect your personal information to Firestore
+                    in the next development step.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGES SECTION -->
+        <section id="messages" class="section">
+
+            <div class="panel">
+
+                <h2>Visitor Messages</h2>
+
+                <p class="welcome-text">
+                    We'll connect your contact form and display visitor
+                    messages here in the next development step.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- Firebase dashboard JavaScript -->
+<script type="module" src="../JS/admin.js"></script>
+
+</body>
+</html>

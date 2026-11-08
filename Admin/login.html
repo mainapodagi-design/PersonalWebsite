@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Login</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="login-box">
+
+            <div class="login-icon">🔐</div>
+
+            <h1>Administrator Login</h1>
+            <p>Sign in to manage your personal website.</p>
+
+            <form id="loginForm">
+
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit" id="loginButton">
+                    Sign In
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+            <a href="../HTML/home.html" class="back-link">
+                ← Back to Website
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Login JavaScript -->
+    <script type="module" src="../JS/auth.js"></script>
+
+</body>
+</html>
