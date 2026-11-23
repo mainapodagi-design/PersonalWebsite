@@ -28,7 +28,10 @@ import {
    ADMINISTRATOR CONFIGURATION
 ========================================= */
 
-// Replace this with your actual Firebase administrator UID
+// IMPORTANT:
+// Replace this placeholder with the SAME administrator UID
+// currently used in your existing admin.js file.
+
 const ADMIN_UID = "LHA75qYACFOqw6hCUDRXm9h1dqT2";
 
 
@@ -45,6 +48,7 @@ const projectName = document.getElementById("projectName");
 const projectDescription = document.getElementById("projectDescription");
 const projectTechnologies = document.getElementById("projectTechnologies");
 const projectLink = document.getElementById("projectLink");
+const projectImage = document.getElementById("projectImage");
 
 const projectList = document.getElementById("projectList");
 const projectCount = document.getElementById("projectCount");
@@ -108,7 +112,7 @@ onAuthStateChanged(auth, async (user) => {
 
     }
 
-    // Check that the signed-in user is the authorised administrator
+    // Check authorised administrator
     if (user.uid !== ADMIN_UID) {
 
         await signOut(auth);
@@ -143,7 +147,6 @@ async function loadProjects() {
     try {
 
         const projectsRef = collection(db, "projects");
-
         const snapshot = await getDocs(projectsRef);
 
         projectList.replaceChildren();
@@ -153,7 +156,6 @@ async function loadProjects() {
         if (snapshot.empty) {
 
             projectList.textContent = "No projects added yet.";
-
             return;
 
         }
@@ -162,7 +164,7 @@ async function loadProjects() {
 
             const project = projectDocument.data();
 
-            // Create project card safely
+            // Create project card
             const card = document.createElement("div");
             card.className = "project-item";
 
@@ -176,9 +178,15 @@ async function loadProjects() {
             technologies.textContent =
                 "Technologies: " + (project.technologies || "Not specified");
 
+            // Display saved image path
+            const imageInfo = document.createElement("p");
+            imageInfo.textContent =
+                "Image: " + (project.image || "Not specified");
+
             const actions = document.createElement("div");
             actions.className = "project-actions";
 
+            // Edit button
             const editButton = document.createElement("button");
             editButton.className = "edit-button";
             editButton.textContent = "Edit";
@@ -187,6 +195,7 @@ async function loadProjects() {
                 editProject(projectDocument.id, project);
             });
 
+            // Delete button
             const deleteButton = document.createElement("button");
             deleteButton.className = "delete-button";
             deleteButton.textContent = "Delete";
@@ -197,7 +206,13 @@ async function loadProjects() {
 
             actions.append(editButton, deleteButton);
 
-            card.append(title, description, technologies, actions);
+            card.append(
+                title,
+                description,
+                technologies,
+                imageInfo,
+                actions
+            );
 
             projectList.appendChild(card);
 
@@ -223,6 +238,7 @@ projectForm.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
+    // Collect project information
     const projectData = {
 
         name: projectName.value.trim(),
@@ -232,6 +248,8 @@ projectForm.addEventListener("submit", async (event) => {
         technologies: projectTechnologies.value.trim(),
 
         link: projectLink.value.trim(),
+
+        image: projectImage.value.trim(),
 
         updatedAt: serverTimestamp()
 
@@ -253,25 +271,31 @@ projectForm.addEventListener("submit", async (event) => {
 
         if (projectId.value) {
 
-            // Update an existing project
+            // Update existing project
             await updateDoc(
                 doc(db, "projects", projectId.value),
                 projectData
             );
 
-            statusMessage.textContent = "Project updated successfully!";
+            statusMessage.textContent =
+                "Project updated successfully!";
 
         } else {
 
-            // Add a new project
+            // Add new project
             projectData.createdAt = serverTimestamp();
 
-            await addDoc(collection(db, "projects"), projectData);
+            await addDoc(
+                collection(db, "projects"),
+                projectData
+            );
 
-            statusMessage.textContent = "Project added successfully!";
+            statusMessage.textContent =
+                "Project added successfully!";
 
         }
 
+        // Reset form
         projectForm.reset();
         projectId.value = "";
 
@@ -316,6 +340,9 @@ function editProject(id, project) {
     projectTechnologies.value = project.technologies || "";
 
     projectLink.value = project.link || "";
+
+    // Load existing image path into the form
+    projectImage.value = project.image || "";
 
     projectFormTitle.textContent = "Edit Project";
 
