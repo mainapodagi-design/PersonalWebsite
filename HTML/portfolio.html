@@ -22,21 +22,36 @@
 <body>
 
     <!-- ================= NAVIGATION BAR ================= -->
-    <header>
-        <nav class="navbar">
 
-            <div class="logo">
-                My Portfolio
-            </div>
+    <header class="navbar">
 
-            <ul class="nav-links">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="background.html">Background</a></li>
-                <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
+        <!-- Website Logo -->
+        <a href="home.html" class="logo">
+            <span>MY</span> WEBSITE.
+        </a>
+
+        <!-- Mobile Menu Checkbox -->
+        <input type="checkbox" id="menu-toggle">
+
+        <!-- Three-Line Mobile Menu Icon -->
+        <label for="menu-toggle" class="menu-icon"
+            aria-label="Toggle navigation menu">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+
+            <a href="home.html">Home</a>
+
+            <a href="background.html">Background</a>
+
+            <a href="portfolio.html" class="active">Portfolio</a>
+
+            <a href="contact.html">Contact</a>
 
         </nav>
+
     </header>
 
 
