@@ -316,7 +316,26 @@ a {
 
 .footer i {
     color: #168cff;
+}/* ================= ADMIN LOGIN ICON ================= */
+
+.admin-access {
+    text-align: center;
+    margin-top: 15px;
+    padding-bottom: 5px;
 }
+
+.admin-access a {
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.admin-access a:hover {
+    color: #ffffff;
+    transform: scale(1.15);
+}
+
 
 /* ==========================================
    RESPONSIVE DESIGN

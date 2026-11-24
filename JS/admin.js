@@ -30,10 +30,6 @@ import {
    ADMINISTRATOR CONFIGURATION
 ========================================= */
 
-// IMPORTANT:
-// Replace this placeholder with the SAME administrator UID
-// currently used in your existing admin.js file.
-
 const ADMIN_UID = "LHA75qYACFOqw6hCUDRXm9h1dqT2";
 
 
@@ -61,9 +57,10 @@ const saveProjectButton = document.getElementById("saveProjectButton");
 const cancelEditButton = document.getElementById("cancelEditButton");
 const projectFormTitle = document.getElementById("projectFormTitle");
 
-// ==========================================
-// PROFILE FORM ELEMENTS
-// ==========================================
+
+/* =========================================
+   PROFILE FORM ELEMENTS
+========================================= */
 
 const profileForm = document.getElementById("profileForm");
 
@@ -71,7 +68,7 @@ const fullName = document.getElementById("fullName");
 const professionalTitle = document.getElementById("professionalTitle");
 const aboutMe = document.getElementById("aboutMe");
 const profileImage = document.getElementById("profileImage");
-const profileSkills = document.getElementById("profileSkills");
+
 const profileEmail = document.getElementById("profileEmail");
 const profilePhone = document.getElementById("profilePhone");
 const profileLocation = document.getElementById("profileLocation");
@@ -433,9 +430,10 @@ async function removeProject(id) {
 
 }
 
-// ==========================================
-// LOAD PROFILE FROM FIRESTORE
-// ==========================================
+
+/* =========================================
+   LOAD PROFILE FROM FIRESTORE
+========================================= */
 
 async function loadProfile() {
 
@@ -450,20 +448,27 @@ async function loadProfile() {
             const profile = profileSnapshot.data();
 
             fullName.value = profile.fullName || "";
+
             professionalTitle.value = profile.professionalTitle || "";
+
             aboutMe.value = profile.aboutMe || "";
+
             profileImage.value = profile.profileImage || "";
-            profileSkills.value = profile.skills || "";
+
             profileEmail.value = profile.email || "";
+
             profilePhone.value = profile.phone || "";
+
             profileLocation.value = profile.location || "";
+
             profileCountry.value = profile.country || "";
 
             profileStatus.textContent = "Profile loaded successfully!";
 
         } else {
 
-            profileStatus.textContent = "No profile saved yet. Enter your information.";
+            profileStatus.textContent =
+                "No profile saved yet. Enter your information.";
 
         }
 
@@ -478,9 +483,9 @@ async function loadProfile() {
 }
 
 
-// ==========================================
-// SAVE PROFILE TO FIRESTORE
-// ==========================================
+/* =========================================
+   SAVE PROFILE TO FIRESTORE
+========================================= */
 
 profileForm.addEventListener("submit", async (event) => {
 
@@ -489,30 +494,21 @@ profileForm.addEventListener("submit", async (event) => {
     const profileData = {
 
         fullName: fullName.value.trim(),
-
         professionalTitle: professionalTitle.value.trim(),
-
         aboutMe: aboutMe.value.trim(),
-
         profileImage: profileImage.value.trim(),
-
-        skills: profileSkills.value.trim(),
-
         email: profileEmail.value.trim(),
-
         phone: profilePhone.value.trim(),
-
         location: profileLocation.value.trim(),
-
         country: profileCountry.value.trim(),
-
         updatedAt: serverTimestamp()
 
     };
 
     if (!profileData.fullName || !profileData.aboutMe) {
 
-        profileStatus.textContent = "Please enter your name and About Me information.";
+        profileStatus.textContent =
+            "Please enter your name and About Me information.";
 
         return;
 
@@ -530,13 +526,15 @@ profileForm.addEventListener("submit", async (event) => {
             { merge: true }
         );
 
-        profileStatus.textContent = "Your profile has been saved successfully!";
+        profileStatus.textContent =
+            "Your profile has been saved successfully!";
 
     } catch (error) {
 
         console.error("Profile saving error:", error);
 
-        profileStatus.textContent = "Unable to save profile. Check your Firestore rules.";
+        profileStatus.textContent =
+            "Unable to save profile. Check your Firestore rules.";
 
     } finally {
 
@@ -547,6 +545,7 @@ profileForm.addEventListener("submit", async (event) => {
     }
 
 });
+
 
 /* =========================================
    LOAD MESSAGE COUNT
