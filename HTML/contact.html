@@ -1,7 +1,9 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <!-- Character encoding -->
     <meta charset="UTF-8">
 
@@ -11,16 +13,17 @@
     <!-- Page title -->
     <title>My Personal Website | Contact</title>
 
-    <!-- Link contact CSS -->
+    <!-- Contact CSS -->
     <link rel="stylesheet" href="../CSS/contact.css">
 
-    <!-- Online Font Awesome icons -->
+    <!-- Font Awesome icons -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Google font -->
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+
 </head>
 
 <body>
@@ -35,19 +38,23 @@
 
         <!-- Mobile menu -->
         <input type="checkbox" id="menu-toggle">
+
         <label for="menu-toggle" class="menu-icon">
             <i class="fas fa-bars"></i>
         </label>
 
         <!-- Navigation links -->
         <nav class="nav-links">
+
             <a href="home.html">Home</a>
             <a href="background.html">Background</a>
             <a href="portfolio.html">Portfolio</a>
             <a href="contact.html" class="active">Contact</a>
+
         </nav>
 
     </header>
+
 
     <!-- Main contact section -->
     <main class="contact-page">
@@ -66,8 +73,10 @@
 
         </section>
 
+
         <!-- Contact content -->
         <section class="contact-container">
+
 
             <!-- Left contact information -->
             <div class="contact-info">
@@ -79,6 +88,7 @@
                     or simply say hello, my inbox is always open.
                 </p>
 
+
                 <!-- Email information -->
                 <div class="contact-item">
 
@@ -88,10 +98,16 @@
 
                     <div>
                         <h3>Email</h3>
-                        <p>mainapodagi@email.com or <br>240461@student.dwu.ac.pg</p>
+
+                        <p>
+                            mainapodagi@email.com or
+                            <br>
+                            240461@student.dwu.ac.pg
+                        </p>
                     </div>
 
                 </div>
+
 
                 <!-- Phone information -->
                 <div class="contact-item">
@@ -102,10 +118,14 @@
 
                     <div>
                         <h3>Phone</h3>
-                        <p>+675 7743 9848 or 8439 4245</p>
+
+                        <p>
+                            +675 7743 9848 or 8439 4245
+                        </p>
                     </div>
 
                 </div>
+
 
                 <!-- Location information -->
                 <div class="contact-item">
@@ -116,98 +136,163 @@
 
                     <div>
                         <h3>Location</h3>
+
                         <p>Papua New Guinea</p>
                     </div>
 
                 </div>
 
+
                 <!-- Social media links -->
                 <div class="contact-socials">
 
-                    <a href="https://facebook.com/" target="_blank"
+                    <a href="https://facebook.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        aria-label="Facebook">
+
                         <i class="fab fa-facebook-f"></i>
+
                     </a>
 
-                    <a href="https://instagram.com/" target="_blank"
+
+                    <a href="https://instagram.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        aria-label="Instagram">
+
                         <i class="fab fa-instagram"></i>
+
                     </a>
 
-                    <a href="https://linkedin.com/" target="_blank"
+
+                    <a href="https://linkedin.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        aria-label="LinkedIn">
+
                         <i class="fab fa-linkedin-in"></i>
+
                     </a>
 
-                    <a href="https://github.com/" target="_blank"
+
+                    <a href="https://github.com/"
+                       target="_blank"
+                       rel="noopener noreferrer"
                        aria-label="GitHub">
+
                         <i class="fab fa-github"></i>
+
                     </a>
 
                 </div>
 
             </div>
 
+
+
             <!-- Right contact form -->
             <div class="contact-form-container">
 
                 <h2>Send Me a Message</h2>
 
+
                 <!-- Contact form -->
                 <form id="contactForm">
 
+
                     <!-- Name field -->
                     <div class="form-group">
+
                         <label for="name">Your Name</label>
 
-                        <input type="text"
-                               id="name"
-                               name="name"
-                               placeholder="Enter your full name"
-                               required>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
                     </div>
+
+
 
                     <!-- Email field -->
                     <div class="form-group">
+
                         <label for="email">Your Email</label>
 
-                        <input type="email"
-                               id="email"
-                               name="email"
-                               placeholder="Enter your email address"
-                               required>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                            required
+                        >
+
                     </div>
+
+
 
                     <!-- Subject field -->
                     <div class="form-group">
+
                         <label for="subject">Subject</label>
 
-                        <input type="text"
-                               id="subject"
-                               name="subject"
-                               placeholder="Enter message subject"
-                               required>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="title"
+                            placeholder="Enter message subject"
+                            required
+                        >
+
                     </div>
+
+
 
                     <!-- Message field -->
                     <div class="form-group">
+
                         <label for="message">Your Message</label>
 
-                        <textarea id="message"
-                                  name="message"
-                                  rows="5"
-                                  placeholder="Write your message here..."
-                                  required></textarea>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message here..."
+                            required
+                        ></textarea>
+
                     </div>
 
+
+
                     <!-- Submit button -->
-                    <button type="submit" class="submit-btn">
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                        id="submitBtn"
+                    >
+
                         Send Message
+
                         <i class="fas fa-paper-plane"></i>
+
                     </button>
 
+
+
                     <!-- Form response message -->
-                    <p id="form-response"></p>
+                    <p
+                        id="form-response"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
 
                 </form>
 
@@ -217,44 +302,33 @@
 
     </main>
 
+
+
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 My Personal Website. All Rights Reserved.</p>
-        <p>Designed with <i class="fas fa-heart"></i> and creativity.</p>
+
+        <p>
+            &copy; 2026 My Personal Website. All Rights Reserved.
+        </p>
+
+        <p>
+            Designed with
+            <i class="fas fa-heart"></i>
+            and creativity.
+        </p>
+
     </footer>
 
-    <!-- Simple JavaScript form interaction -->
-    <script>
 
-        // Get the contact form
-        const contactForm = document.getElementById("contactForm");
 
-        // Get the response paragraph
-        const response = document.getElementById("form-response");
+    <!-- EmailJS library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-        // Listen for form submission
-        contactForm.addEventListener("submit", function(event) {
 
-            // Prevent the page from refreshing
-            event.preventDefault();
+    <!-- External contact JavaScript -->
+    <script src="../JS/contact.js"></script>
 
-            // Get the visitor's name
-            const visitorName = document.getElementById("name").value;
-
-            // Display a personalised response
-            response.textContent =
-                "Thank you, " + visitorName +
-                "! Your message has been prepared.";
-
-            // Display success message
-            response.style.color = "#35d07f";
-
-            // Reset form fields
-            contactForm.reset();
-
-        });
-
-    </script>
 
 </body>
+
 </html>

@@ -34,33 +34,6 @@ async function loadPublicProfile() {
 
 
         // ==================================
-        // HOME PAGE ELEMENTS
-        // ==================================
-
-        const homeName = document.getElementById("profileName");
-        const homeTitle = document.getElementById("profileTitle");
-        const homeAbout = document.getElementById("profileAbout");
-        const homePhoto = document.getElementById("profilePhoto");
-
-
-        if (homeName) {
-            homeName.textContent = profile.fullName || "Malachai Mainapo";
-        }
-
-        if (homeTitle) {
-            homeTitle.textContent = profile.professionalTitle || "Software Developer";
-        }
-
-        if (homeAbout) {
-            homeAbout.textContent = profile.aboutMe || "";
-        }
-
-        if (homePhoto && profile.profileImage) {
-            homePhoto.src = profile.profileImage;
-        }
-
-
-        // ==================================
         // BACKGROUND PAGE ELEMENTS
         // ==================================
 
@@ -70,7 +43,6 @@ async function loadPublicProfile() {
         const backgroundPhoto = document.getElementById("backgroundPhoto");
         const backgroundProfession = document.getElementById("backgroundProfession");
 
-        const backgroundSkills = document.getElementById("backgroundSkills");
         const backgroundEmail = document.getElementById("backgroundEmail");
         const backgroundPhone = document.getElementById("backgroundPhone");
         const backgroundLocation = document.getElementById("backgroundLocation");
@@ -94,10 +66,6 @@ async function loadPublicProfile() {
         if (backgroundProfession) {
             backgroundProfession.textContent =
                 profile.professionalTitle || "Student / Aspiring Developer";
-        }
-
-        if (backgroundSkills) {
-            backgroundSkills.textContent = profile.skills || "Not specified";
         }
 
         if (backgroundEmail) {
