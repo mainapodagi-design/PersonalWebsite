@@ -190,22 +190,131 @@
 
         </section>
 
-
+        
         <!-- PROFILE SECTION -->
         <section id="profile" class="section">
 
             <div class="panel">
 
-                <h2>Personal Profile</h2>
+                <h2>Manage Personal Profile</h2>
 
                 <p class="welcome-text">
-                    We'll connect your personal information to Firestore
-                    in the next development step.
+                    Update your personal information. Your changes
+                    will appear on your public website.
                 </p>
+
+                <form id="profileForm">
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+                    </div>
+
+                    <!-- Professional Title -->
+                    <div class="form-group">
+                        <label for="professionalTitle">Professional Title</label>
+                        <input
+                            type="text"
+                            id="professionalTitle"
+                            placeholder="e.g. Mathematics and Computer Science Student"
+                        >
+                    </div>
+
+                    <!-- About Me -->
+                    <div class="form-group">
+                        <label for="aboutMe">About Me</label>
+                        <textarea
+                            id="aboutMe"
+                            placeholder="Write something about yourself..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <!-- Profile Picture Path -->
+                    <div class="form-group">
+                        <label for="profileImage">Profile Picture Path</label>
+                        <input
+                            type="text"
+                            id="profileImage"
+                            placeholder="../IMAGES/ProfPic.png"
+                        >
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="form-group">
+                        <label for="profileSkills">
+                            Skills and Technologies
+                        </label>
+                        <textarea
+                            id="profileSkills"
+                            placeholder="HTML, CSS, JavaScript, Python, Firebase"
+                        ></textarea>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="profileEmail">Email Address</label>
+                        <input
+                            type="email"
+                            id="profileEmail"
+                            placeholder="your@email.com"
+                        >
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="profilePhone">Phone Number</label>
+                        <input
+                            type="tel"
+                            id="profilePhone"
+                            placeholder="Enter your phone number"
+                        >
+                    </div>
+
+                    <!-- Location -->
+                    <div class="form-group">
+                        <label for="profileLocation">Location</label>
+                        <input
+                            type="text"
+                            id="profileLocation"
+                            placeholder="e.g. Madang, Papua New Guinea"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="profileCountry">Country</label>
+                        <input
+                            type="text"
+                            id="profileCountry"
+                            placeholder="e.g. Papua New Guinea">
+                    </div>
+
+                    <!-- Save Button -->
+                    <button
+                        type="submit"
+                        class="primary-button"
+                        id="saveProfileButton"
+                    >
+                        Save Profile
+                    </button>
+
+                    <p
+                        id="profileStatus"
+                        role="status"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
 
             </div>
 
         </section>
+
 
 
         <!-- MESSAGES SECTION -->

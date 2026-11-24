@@ -459,3 +459,121 @@
     }
 
 }
+
+/* ==========================================
+   PORTFOLIO LAYOUT FIX
+========================================== */
+
+/* Main portfolio introduction */
+.portfolio-section {
+    padding: 70px 9% 45px;
+    text-align: center;
+}
+
+.portfolio-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.portfolio-content h1 {
+    font-size: clamp(35px, 5vw, 48px);
+    margin-bottom: 18px;
+    color: #ffffff;
+}
+
+.portfolio-content p {
+    color: #aebed0;
+    line-height: 1.9;
+    font-size: 15px;
+}
+
+/* Skills section */
+.skills-section {
+    width: 82%;
+    max-width: 1200px;
+    margin: 0 auto 90px;
+}
+
+.skills-section h2 {
+    margin-bottom: 35px;
+}
+
+/* Skills cards */
+.skills-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+/* Projects section */
+.projects-section {
+    width: 82%;
+    max-width: 1200px;
+    margin: 0 auto 90px;
+}
+
+.projects-section h2 {
+    margin-bottom: 18px;
+}
+
+.projects-description {
+    margin-bottom: 40px;
+}
+
+/* Call to action */
+.portfolio-cta {
+    width: 82%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+/* Responsive tablet layout */
+@media (max-width: 900px) {
+
+    .portfolio-section {
+        padding: 55px 6% 35px;
+    }
+
+    .skills-section,
+    .projects-section,
+    .portfolio-cta {
+        width: 88%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* Responsive mobile layout */
+@media (max-width: 600px) {
+
+    .portfolio-section {
+        padding: 45px 6% 30px;
+    }
+
+    .portfolio-content h1 {
+        font-size: 32px;
+    }
+
+    .skills-section,
+    .projects-section,
+    .portfolio-cta {
+        width: 90%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+}
+
+/* Small phones */
+@media (max-width: 350px) {
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

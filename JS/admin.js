@@ -17,6 +17,8 @@ import {
     collection,
     addDoc,
     getDocs,
+    getDoc,
+    setDoc,
     updateDoc,
     deleteDoc,
     doc,
@@ -58,6 +60,25 @@ const statusMessage = document.getElementById("statusMessage");
 const saveProjectButton = document.getElementById("saveProjectButton");
 const cancelEditButton = document.getElementById("cancelEditButton");
 const projectFormTitle = document.getElementById("projectFormTitle");
+
+// ==========================================
+// PROFILE FORM ELEMENTS
+// ==========================================
+
+const profileForm = document.getElementById("profileForm");
+
+const fullName = document.getElementById("fullName");
+const professionalTitle = document.getElementById("professionalTitle");
+const aboutMe = document.getElementById("aboutMe");
+const profileImage = document.getElementById("profileImage");
+const profileSkills = document.getElementById("profileSkills");
+const profileEmail = document.getElementById("profileEmail");
+const profilePhone = document.getElementById("profilePhone");
+const profileLocation = document.getElementById("profileLocation");
+const profileCountry = document.getElementById("profileCountry");
+
+const profileStatus = document.getElementById("profileStatus");
+const saveProfileButton = document.getElementById("saveProfileButton");
 
 
 /* =========================================
@@ -130,6 +151,7 @@ onAuthStateChanged(auth, async (user) => {
 
         await loadProjects();
         await loadMessageCount();
+        await loadProfile();
 
     }
 
@@ -411,6 +433,120 @@ async function removeProject(id) {
 
 }
 
+// ==========================================
+// LOAD PROFILE FROM FIRESTORE
+// ==========================================
+
+async function loadProfile() {
+
+    try {
+
+        const profileRef = doc(db, "profile", "main");
+
+        const profileSnapshot = await getDoc(profileRef);
+
+        if (profileSnapshot.exists()) {
+
+            const profile = profileSnapshot.data();
+
+            fullName.value = profile.fullName || "";
+            professionalTitle.value = profile.professionalTitle || "";
+            aboutMe.value = profile.aboutMe || "";
+            profileImage.value = profile.profileImage || "";
+            profileSkills.value = profile.skills || "";
+            profileEmail.value = profile.email || "";
+            profilePhone.value = profile.phone || "";
+            profileLocation.value = profile.location || "";
+            profileCountry.value = profile.country || "";
+
+            profileStatus.textContent = "Profile loaded successfully!";
+
+        } else {
+
+            profileStatus.textContent = "No profile saved yet. Enter your information.";
+
+        }
+
+    } catch (error) {
+
+        console.error("Profile loading error:", error);
+
+        profileStatus.textContent = "Unable to load profile.";
+
+    }
+
+}
+
+
+// ==========================================
+// SAVE PROFILE TO FIRESTORE
+// ==========================================
+
+profileForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    const profileData = {
+
+        fullName: fullName.value.trim(),
+
+        professionalTitle: professionalTitle.value.trim(),
+
+        aboutMe: aboutMe.value.trim(),
+
+        profileImage: profileImage.value.trim(),
+
+        skills: profileSkills.value.trim(),
+
+        email: profileEmail.value.trim(),
+
+        phone: profilePhone.value.trim(),
+
+        location: profileLocation.value.trim(),
+
+        country: profileCountry.value.trim(),
+
+        updatedAt: serverTimestamp()
+
+    };
+
+    if (!profileData.fullName || !profileData.aboutMe) {
+
+        profileStatus.textContent = "Please enter your name and About Me information.";
+
+        return;
+
+    }
+
+    saveProfileButton.disabled = true;
+
+    saveProfileButton.textContent = "Saving...";
+
+    try {
+
+        await setDoc(
+            doc(db, "profile", "main"),
+            profileData,
+            { merge: true }
+        );
+
+        profileStatus.textContent = "Your profile has been saved successfully!";
+
+    } catch (error) {
+
+        console.error("Profile saving error:", error);
+
+        profileStatus.textContent = "Unable to save profile. Check your Firestore rules.";
+
+    } finally {
+
+        saveProfileButton.disabled = false;
+
+        saveProfileButton.textContent = "Save Profile";
+
+    }
+
+});
 
 /* =========================================
    LOAD MESSAGE COUNT
